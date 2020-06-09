@@ -1,0 +1,46 @@
+<div fxFlex.gt-sm="40" fxFlex="100" class="container">
+    <form [formGroup]="employeeForm" (ngSubmit)="onFormSubmit()">
+        <div fxLayout="row warp" fxLayoutAlign="space-between start">
+            <div fxFlex.gt-sm="45" fxFlex="100">
+                <mat-form-field class="input-container" appearance="outline">
+                    <input matInput placeholder="Name" formControlName="name">
+                </mat-form-field>
+            </div>
+            <div fxFlex.gt-sm="45" fxFlex="100">
+                <mat-form-field class="input-container" appearance="outline">
+                    <input matInput placeholder="Phone" formControlName="phone">
+                </mat-form-field>
+            </div>
+        </div>
+        <div formGroupName="address">
+            <div fxLayout="row warp" fxLayoutAlign="space-between start">
+                <div fxFlex.gt-sm="45" fxFlex="100">
+                    <mat-form-field class="input-container" appearance="outline">
+                        <input matInput placeholder="Address 1" formControlName="address_line1">
+                    </mat-form-field>
+                </div>
+                <div fxFlex.gt-sm="45" fxFlex="100">
+                    <mat-form-field class="input-container" appearance="outline">
+                        <input matInput placeholder="Address 2" formControlName="address_line2">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div fxLayout="row warp" fxLayoutAlign="space-between start">
+                <div fxFlex.gt-sm="45" fxFlex="100">
+                    <mat-form-field class="input-container" appearance="outline">
+                        <input matInput placeholder="City" formControlName="city">
+                    </mat-form-field>
+                </div>
+                <div fxFlex.gt-sm="45" fxFlex="100">
+                    <mat-form-field class="input-container" appearance="outline">
+                        <input matInput placeholder="Postal Code" formControlName="postal_code">
+                    </mat-form-field>
+                </div>
+            </div>
+        </div>
+        <div fxLayout="row warp">
+            <button mat-raised-button type="submit" color="primary" class="m-r-20">{{primaryBtnText}}</button>
+            <button mat-raised-button color="secondary" (click)="onBack()">Cancel</button>
+        </div>
+    </form>
+</div>

@@ -2,8 +2,9 @@
     <div>
         <h2>Employee List</h2>
     </div>
-    <div class="m-b-20">
+    <div class="action-bar">
         <input class="search-box" type="text" placeholder="Search..." [(ngModel)]="searchText">
+        <button mat-raised-button color="primary" type="button" (click)="onAddNew()">ADD NEW</button>
     </div>
 <table>
     <thead>
