@@ -1,0 +1,29 @@
+<div>
+    <div>
+        <h2>Employee List</h2>
+    </div>
+<table>
+    <thead>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>City</th>
+        <th>Address 1</th>
+        <th>Address 2</th>
+        <th>Postal Code</th>
+        <th>Edit</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of employees">
+            <td>{{employee.id}}</td>
+            <td>{{employee.name}}</td>
+            <td>{{employee.phone | isNumber}}</td>
+            <td>{{employee.address.city}}</td>
+            <td>{{employee.address.address_line1}}</td>
+            <td>{{employee.address.address_line2}}</td>
+            <td>{{employee.address.postal_code}}</td>
+            <td><a class="pointer" (click)="onSelectEdit(employee)">Edit</a></td>
+        </tr>
+    </tbody>
+</table>
+</div>
