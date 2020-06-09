@@ -9,6 +9,8 @@ import { Employees } from "../interfaces/employee-interface";
 })
 export class EmployeeListComponent implements OnInit {
   employees: Employees[] = employeeData;
+  searchColumn = ['name', 'address.city']; //Column name to apply filter
+  searchText: string = '';
 
   constructor() { }
 

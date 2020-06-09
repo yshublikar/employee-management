@@ -2,6 +2,9 @@
     <div>
         <h2>Employee List</h2>
     </div>
+    <div class="m-b-20">
+        <input class="search-box" type="text" placeholder="Search..." [(ngModel)]="searchText">
+    </div>
 <table>
     <thead>
         <th>Id</th>
@@ -14,7 +17,7 @@
         <th>Edit</th>
     </thead>
     <tbody>
-        <tr *ngFor="let employee of employees">
+        <tr *ngFor="let employee of employees | filter : searchText : searchColumn">
             <td>{{employee.id}}</td>
             <td>{{employee.name}}</td>
             <td>{{employee.phone | isNumber}}</td>
